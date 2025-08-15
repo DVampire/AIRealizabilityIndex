@@ -1,14 +1,3 @@
----
-title: AI Realizability Index
-emoji: 📚
-colorFrom: blue
-colorTo: purple
-sdk: docker
-sdk_version: "latest"
-app_file: app.py
-pinned: false
----
-
 # AI Realizability Index - AI Paper Evaluation System
 
 A comprehensive system for evaluating AI research papers using advanced language models with asynchronous processing and concurrent evaluation capabilities.
