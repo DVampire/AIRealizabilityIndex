@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paper Index - Daily AI Papers</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📄</text></svg>">
+    
+    <link rel="stylesheet" href="/styles.css?v=10" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <div class="logo">
+            <i class="fas fa-book-open"></i>
+            <span>AIR Index</span>
+          </div>
+        </div>
+        
+        <div class="nav-center">
+          <div class="search-container">
+            <i class="fas fa-search search-icon"></i>
+            <input type="text" placeholder="Search papers..." class="search-input">
+            <i class="fas fa-magic search-magic"></i>
+          </div>
+        </div>
+        
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Header -->
+    <header class="main-header">
+      <div class="header-container">
+        <div class="header-left">
+          <h1>Daily Papers</h1>
+          <p class="subtitle">by AI Realizability Index Agent</p>
+        </div>
+        
+        <div class="header-center">
+          <div class="search-batch-container">
+            <div class="ai-search-container">
+              <i class="fas fa-sparkles"></i>
+              <input type="text" placeholder="Search any paper with AI..." class="ai-search-input">
+              <i class="fas fa-cube"></i>
+            </div>
+            <button class="batch-evaluate-btn" id="batchEvaluateBtn">
+              <i class="fas fa-rocket"></i>
+              <span>Evaluate All</span>
+            </button>
+          </div>
+        </div>
+        
+        <div class="header-right">
+          <div class="filter-buttons">
+            <button class="filter-btn active">Daily</button>
+            <button class="filter-btn">Weekly</button>
+            <button class="filter-btn">Monthly</button>
+            <button class="filter-btn star-btn">
+              <i class="fas fa-star"></i>
+            </button>
+          </div>
+          
+          <div class="date-navigation">
+            <button class="nav-btn" id="prevDate">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+            <span class="date-display" id="dateDisplay"></span>
+            <button class="nav-btn" id="nextDate">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main class="main-content">
+      <div class="content-container">
+        <section id="cards" class="cards-grid"></section>
+      </div>
+    </main>
+
+    <!-- Loading Overlay -->
+    <div id="loadingOverlay" class="loading-overlay">
+      <div class="loading-spinner">
+        <div class="spinner"></div>
+        <div class="loading-text">Loading papers...</div>
+        <div class="loading-subtext">Fetching data from Hugging Face</div>
+      </div>
+    </div>
+
+    <script src="/main.js"></script>
+  </body>
+</html>
+
+

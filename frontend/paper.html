@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Paper Evaluation</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📊</text></svg>">
+    
+    <link rel="stylesheet" href="/styles.css?v=10" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+      <div class="nav-container">
+        <div class="nav-left">
+          <a href="/" class="back-link">
+            <i class="fas fa-arrow-left"></i>
+            <span>Back to Daily Papers</span>
+          </a>
+        </div>
+        
+        <div class="nav-center">
+          <div class="page-title">
+            <i class="fas fa-chart-line"></i>
+            <span>Paper Evaluation</span>
+          </div>
+        </div>
+        
+        <div class="nav-right">
+          <button class="theme-toggle" id="themeToggle">
+            <i class="fas fa-sun light-icon"></i>
+            <i class="fas fa-moon dark-icon"></i>
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main class="paper-main">
+      <div class="paper-container">
+        <!-- Paper Header -->
+        <div class="paper-header">
+          <div class="paper-meta">
+            <h1 id="title">Paper Evaluation</h1>
+            <div class="meta-grid" id="metaGrid">
+              <!-- Meta information will be populated by JavaScript -->
+            </div>
+          </div>
+        </div>
+
+        <!-- Content Layout -->
+        <div class="content-layout">
+          <!-- Main Content -->
+          <div class="main-content">
+            <article id="content" class="evaluation-content">
+              <!-- Content will be populated by JavaScript -->
+            </article>
+          </div>
+
+          <!-- Sidebar -->
+          <aside class="sidebar">
+            <div class="scorecard-panel">
+              <div class="panel-header">
+                <h2><i class="fas fa-radar"></i> Scorecard</h2>
+                <div class="overall-score" id="overallScore">
+                  <span class="score-number">-</span>
+                  <span class="score-label">Overall</span>
+                </div>
+              </div>
+              <div class="radar-container">
+                <canvas id="radar" width="280" height="280"></canvas>
+              </div>
+              <div class="radar-legend">
+                <h3>Dimensions</h3>
+                <ul id="radar-legend" class="legend-list">
+                  <!-- Legend will be populated by JavaScript -->
+                </ul>
+              </div>
+            </div>
+          </aside>
+        </div>
+      </div>
+    </main>
+
+    <script src="/paper.js?v=2"></script>
+  </body>
+</html>
+
+
